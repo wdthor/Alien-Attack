@@ -18,3 +18,5 @@ texture = ExtResource("2_ak8v4")
 position = Vector2(3, -2)
 scale = Vector2(2.73921, 3.21921)
 shape = SubResource("CapsuleShape2D_jr76q")
+
+[node name="RocketContainer" type="Node" parent="."]
