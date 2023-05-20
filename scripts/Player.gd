@@ -6,6 +6,7 @@ var rocket_scene = preload("res://scenes/rocket.tscn")
 
 # @onready is a shortcut for _ready() function
 # $RocketContainer is a shortcut for get_node("RocketContainer")
+# Sets a reference to the RocketContainer node
 @onready var rocket_container = $RocketContainer
 
 #var rocket_container
