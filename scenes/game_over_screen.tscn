@@ -17,7 +17,7 @@ font_size = 46
 font_color = Color(0, 0.580392, 0.960784, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxqdf"]
-bg_color = Color(0.619608, 0.439216, 0.803922, 1)
+bg_color = Color(0.443137, 0.25098, 0.639216, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
