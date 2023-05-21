@@ -34,3 +34,5 @@ shape = SubResource("CircleShape2D_str7t")
 position = Vector2(14, 39)
 scale = Vector2(1.56999, 1.56999)
 shape = SubResource("CircleShape2D_str7t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

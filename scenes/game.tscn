@@ -28,8 +28,9 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
-position = Vector2(44.9617, 8.21347)
+position = Vector2(44.9617, 7.51445)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_uug5h")
 
+[connection signal="took_damage" from="Player" to="." method="_on_player_took_damage"]
 [connection signal="area_entered" from="Deathzone" to="." method="_on_area_2d_area_entered"]
