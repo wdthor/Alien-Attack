@@ -11,3 +11,10 @@ func _physics_process(delta):
 
 func _on_screen_exited():
 	queue_free()
+
+
+func _on_area_entered(area):
+#	clears the rocket
+	queue_free()
+#	call the die function from the enemy script
+	area.die()
