@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://c13jny4mb0hb1"]
+[gd_scene load_steps=9 format=3 uid="uid://c13jny4mb0hb1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6e8li"]
 [ext_resource type="Texture2D" uid="uid://wv4aqabsv1ym" path="res://assets/textures/bg.png" id="1_qgtwo"]
 [ext_resource type="PackedScene" uid="uid://cuiwkouoolhmv" path="res://scenes/player.tscn" id="2_3xix6"]
 [ext_resource type="PackedScene" uid="uid://cxqrwi41804nt" path="res://scenes/hud.tscn" id="2_4siy7"]
 [ext_resource type="PackedScene" uid="uid://btaf1w74x0n8y" path="res://scenes/enemy_spawner.tscn" id="3_5h5ib"]
+[ext_resource type="AudioStream" uid="uid://cbt15nhjxknjh" path="res://assets/audio/hit.wav" id="6_0e32o"]
+[ext_resource type="AudioStream" uid="uid://daogewsy5lrcm" path="res://assets/audio/explode.wav" id="7_6hocc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uug5h"]
 size = Vector2(20, 19.6334)
@@ -36,6 +38,12 @@ collision_mask = 2
 position = Vector2(44.9617, 7.51445)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_uug5h")
+
+[node name="EnemyHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_0e32o")
+
+[node name="PlayerExplodeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6hocc")
 
 [connection signal="took_damage" from="Player" to="." method="_on_player_took_damage"]
 [connection signal="enemy_spawned" from="EnemySpawner" to="." method="_on_enemy_spawner_enemy_spawned"]
